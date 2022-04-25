@@ -1,3 +1,29 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "airbnb",
+    "airbnb-typescript"
+  ],
+  "parserOptions": {
+    "project": ["./tsconfig.json", "./next.config.js"]
+  },
+  "rules": {
+    "no-console": "warn",
+    "import/extensions": "off",
+    "react/function-component-definition": "off",
+    "react/jsx-props-no-spreading": "warn",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off",
+    "import/prefer-default-export": "off"
+  }
 }
+
+
+// 'react/function-component-definition': 'off',
+// 'import/prefer-default-export': 'off',
+// 'react/react-in-jsx-scope': 'off',
+// 'react/prop-types': 'off',
+// '@typescript-eslint/no-unused-vars': 'warn',
+// 'react-hooks/exhaustive-deps': 'warn',
+// 'react/jsx-props-no-spreading': 'warn',
+// 'react/require-default-props': 'off'
