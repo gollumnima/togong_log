@@ -1,37 +1,17 @@
 import Head from 'next/head';
 
+// TODO: meta tag 넣고, title 페이지별로 동적으로 적용하기
+
 type Props = {
-  title: string;
-  description: string;
-  thumbnail: string;
-  seoTitle: string;
-  abstract: string;
-  publishedOn: string;
-}
-const Layout:React.FC<Props> = ({ children, pageTitle }) => {
-  // const metaData = {
-  //   title: post.title,
-  //   description: post.description,
-  //   thumbnail: post.thumbnail,
-  //   seoTitle: post.seoTitle,
-  //   abstract: post.abstract,
-  //   publishedOn: post.publishedOn,
-  // }
-  <>
+  children: React.ReactElement;
+};
+
+const Layout: React.FC<Props> = ({ children }) => (
   <Head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{pageTitle}</title>
+    <title>토목공사</title>
+    <main>{children}</main>
   </Head>
-  </>
-}
+);
 
 export default Layout;
-
-// ---
-// title: How I Built My Blog
-// seoTitle: How I Built my Blog using MDX, Next.js, and React
-// abstract: An in-depth look at the technical structure for my blog.
-// isPublished: true
-// publishedOn: 2021-04-20T09:15:00-0400
-// layout: Article
-// ---
